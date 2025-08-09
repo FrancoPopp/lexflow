@@ -87,7 +87,7 @@ export function Hero() {
         >
           Learn a new language by reading your favorite books. Upload your own
           or explore our library. Get instant translations, save vocabulary, and
-          let AI help you understand what you're reading.
+          let AI help you understand what you&apos;re reading.
         </motion.p>
 
         <motion.button
@@ -339,7 +339,7 @@ export function CTA() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="text-green-600 mt-4"
             >
-              Thanks for joining! We'll notify you when we launch.
+              Thanks for joining! We&apos;ll notify you when we launch.
             </motion.p>
           )}
         </motion.div>
@@ -363,7 +363,7 @@ export function Survey() {
         </h2>
         <p className="text-lg sm:text-xl text-gray-600 mb-8">
           We’re building a tool for language lovers. Take 30 seconds to tell us
-          what you'd love to see!
+          what you&apos;d love to see!
         </p>
         <motion.a
           href="https://tally.so/r/wMpp2M"
