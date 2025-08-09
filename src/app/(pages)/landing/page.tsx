@@ -10,7 +10,7 @@ import {
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-indigo-150 to-indigo-200">
       <Navbar />
 
       <Hero />

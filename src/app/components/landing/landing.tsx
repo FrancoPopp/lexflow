@@ -56,6 +56,14 @@ export function Navbar() {
             >
               How it works
             </motion.a>
+            <motion.a
+              className="text-gray-600 hover:text-indigo-600 transition-colors duration-300 cursor-pointer"
+              whileHover={{ y: -2 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => scrollToSection("survey")}
+            >
+              Survey
+            </motion.a>
           </div>
         </div>
       </div>
@@ -65,7 +73,7 @@ export function Navbar() {
 
 export function Hero() {
   return (
-    <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+    <section className="mt-16 flex flex-col justify-center h-[calc(100vh-4rem)] px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -223,10 +231,7 @@ const stepVariants = {
 
 export function HowItWorks() {
   return (
-    <section
-      id="how-it-works"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-indigo-50 to-purple-50"
-    >
+    <section id="how-it-works" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -350,7 +355,10 @@ export function CTA() {
 
 export function Survey() {
   return (
-    <section className="relative py-16 px-4 sm:px-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 overflow-hidden">
+    <section
+      id="survey"
+      className="relative py-16 px-4 sm:px-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 overflow-hidden"
+    >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
