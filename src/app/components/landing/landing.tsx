@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { supabase } from "@/app/lib/supabaseClient";
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
@@ -23,24 +22,23 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="w-full flex justify-between items-center h-16">
           <motion.div
-            className="flex items-center"
+            className="cursor-pointer"
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.2 }}
+            onClick={() => scrollToSection("hero")}
           >
-            <div className="cursor-pointer">
-              <Image
-                src="/logo.png"
-                alt="Lexflow Logo"
-                width={150}
-                height={150}
-                className="inline-block mr-2"
-              />
-            </div>
+            <Image
+              src="/logo.svg"
+              alt="Lexflow Logo"
+              width={120}
+              height={120}
+              className="inline-block"
+            />
           </motion.div>
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="flex items-center space-x-8">
             <motion.a
               className="text-gray-600 hover:text-indigo-600 transition-colors duration-300 cursor-pointer"
               whileHover={{ y: -2 }}
@@ -74,7 +72,10 @@ export function Navbar() {
 
 export function Hero() {
   return (
-    <section className="mt-16 flex flex-col justify-center h-[calc(100vh-4rem)] px-4 sm:px-6 lg:px-8">
+    <section
+      id="hero"
+      className="flex flex-col justify-center h-screen px-4 sm:px-6 lg:px-8"
+    >
       <div className="max-w-4xl mx-auto text-center">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -287,15 +288,25 @@ export function CTA() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email) return;
 
-    const { error } = await supabase.from("waitlist").insert({ email });
-    if (!error) {
-      setIsSubmitted(true);
-      setEmail("");
-    } else {
-      console.error(error);
-    }
+    fetch("/api/join-waitlist", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          alert(data.error);
+        } else {
+          setIsSubmitted(true);
+          setEmail("");
+        }
+      })
+      .catch((err) => {
+        console.error("Error submitting email:", err);
+        alert("Something went wrong, please try again later.");
+      });
   };
 
   return (
