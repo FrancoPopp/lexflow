@@ -374,7 +374,7 @@ export function Survey() {
   return (
     <section
       id="survey"
-      className="relative py-16 px-4 sm:px-8 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-100 overflow-hidden"
+      className="relative py-16 px-4 sm:px-8 overflow-hidden"
     >
       <motion.div
         initial={{ opacity: 0, y: 30 }}
