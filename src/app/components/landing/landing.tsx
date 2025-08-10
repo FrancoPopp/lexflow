@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { supabase } from "@/app/lib/supabaseClient";
 
 const scrollToSection = (sectionId: string) => {
   const element = document.getElementById(sectionId);
@@ -284,11 +285,16 @@ export function CTA() {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email) return;
+
+    const { error } = await supabase.from("waitlist").insert({ email });
+    if (!error) {
       setIsSubmitted(true);
-      console.log("Email submitted:", email);
+      setEmail("");
+    } else {
+      console.error(error);
     }
   };
 
