@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LexFlow
 
-## Getting Started
+**LexFlow** is a language learning app designed for passionate readers and language lovers.
 
-First, run the development server:
+LexFlow encourages you to learn languages naturally by reading what you love. Upload your own books, translate with ease, create flashcards and get AI-powered help, all in one beautiful, intuitive platform.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **📚 Upload Your Own Books**  
+  Bring your favorite novels, stories, or articles and read them in the language you're learning.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **🔍 Effortless Translations**  
+  Instantly translate words or phrases as you read, without breaking your flow.
 
-## Learn More
+- **💾 Smart Flashcards**  
+  Turn tricky words and phrases into flashcards with a single click for easy review.
 
-To learn more about Next.js, take a look at the following resources:
+- **🤖 AI-Powered Assistance**  
+  Stuck on a sentence? Get explanations, grammar tips, and context from our built-in AI helper.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **📈 Progress Tracking**  
+  Track your vocabulary growth and reading milestones.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **🌍 Multilingual Support**  
+  Learn with content in multiple languages – perfect for polyglots and beginners alike.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Get Involved
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+We're building LexFlow for language lovers, by language lovers.  
+**Help Us Build the Perfect Language Learning Tool**
+
+- [Take our quick survey](https://tally.so/r/wMpp2M) and tell us what features matter most to you.
+- Star ⭐ this repo to follow our progress.
+- [Join our waitlist](https://lexflow-learn.vercel.app/landing) to get notified when we launch!
+
+---
+
+## 📸 Preview
+
+![LexFlow Landing Page Screenshot](./public/landing_screenshot.png)
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js** & **React**
+- **TypeScript** for a robust, scalable codebase
+- **Supabase** for secure, real-time database management
+- **Tailwind CSS** for beautiful, responsive design
+- **Framer Motion** for smooth animations
+- **AI integrations** for smart language help
+- **Vercel** for fast, reliable hosting
