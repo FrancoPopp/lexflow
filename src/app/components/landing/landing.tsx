@@ -119,23 +119,32 @@ export function Hero() {
 const features = [
   {
     icon: "📚",
-    title: "Read any book",
-    description: "Upload your own or pick from our public domain library",
+    title: "Upload Your Own Books",
+    description:
+      "Bring your favorite novels, stories, or articles and read them in the language you're learning",
   },
   {
     icon: "🔍",
-    title: "Instant translation",
-    description: "Tap a word or sentence to translate instantly",
+    title: "Effortless Translations",
+    description:
+      "Instantly translate words or phrases as you read, without breaking your flow",
   },
   {
     icon: "💾",
-    title: "Save vocabulary",
-    description: "Build flashcards from words you discover while reading",
+    title: "Smart Flashcards",
+    description:
+      "Turn tricky words and phrases into flashcards with a single click for easy review",
   },
   {
     icon: "🤖",
-    title: "Ask AI anything",
-    description: "Get grammar tips, paragraph summaries, or translations",
+    title: "AI-Powered Assistance",
+    description:
+      "Stuck on a sentence? Get explanations, grammar tips, and context from our built-in AI helper",
+  },
+  {
+    icon: "📈",
+    title: "Progress Tracking",
+    description: "Track your vocabulary growth and reading milestones",
   },
 ];
 
